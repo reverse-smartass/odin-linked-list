@@ -120,7 +120,7 @@ export class linkedlist {
     let node = this.#liststart;
     let message = "";
     while (node !== null) {
-      message += `(${node.value}) -> `;
+      message += `( ${node.value} ) -> `;
       node = node.next;
     }
     console.log(message + "null");

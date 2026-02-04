@@ -13,18 +13,21 @@ describe("linkedlist", () => {
   ll.append(new node(0.5));
   ll.append(node1);
   ll.toString();
-
   ll.prepend(node1N);
-
   ll.toString();
-
   ll.insert(2, ins);
-
   ll.toString();
-
   ll.remove(3);
-
   ll.toString();
+
+  const list = new linkedlist();
+
+  list.append(new node("dog"));
+  list.append(new node("cat"));
+  list.append(new node("parrot"));
+  list.append(new node("hamster"));
+  list.append(new node("snake"));
+  list.append(new node("turtle"));
 
   test("prepend", () => {
     expect(ll.head()).toStrictEqual(node1N);
@@ -47,5 +50,9 @@ describe("linkedlist", () => {
 
   test("contains negative", () => {
     expect(ll.contains(697)).toStrictEqual(false);
+  });
+
+  test("given test", () => {
+    expect(list.toString()).toStrictEqual("( dog ) -> ( cat ) -> ( parrot ) -> ( hamster ) -> ( snake ) -> ( turtle ) -> null");
   });
 });
