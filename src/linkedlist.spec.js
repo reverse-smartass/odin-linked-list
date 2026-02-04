@@ -34,10 +34,18 @@ describe("linkedlist", () => {
   });
 
   test("at", () => {
-    expect(ll.valueAt(2)).toStrictEqual(node0.value);
+    expect(ll.valueAt(4)).toStrictEqual(node1.value);
   });
 
   test("insert", () => {
     expect(ll.at(2)).toStrictEqual(ins);
+  });
+
+  test("contains positive", () => {
+    expect(ll.contains(3)).toBe(true);
+  });
+
+  test("contains negative", () => {
+    expect(ll.contains(697)).toStrictEqual(false);
   });
 });
